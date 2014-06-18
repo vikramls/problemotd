@@ -15,8 +15,7 @@ def get_place_values(num):
     return place_vals
 
 def is_palindrome(num):
-    place_vals = get_place_values(num)
-
+    """The idea is to figure out the digits in the number from both directions using divmod on powers of 10. Once we get the corresponding digits, we compare and return False on mismatch."""
     MAX_NUM_DIGITS = 1
 
     while True:
@@ -34,11 +33,6 @@ def is_palindrome(num):
         if (q1 != ql1):
             return False
 
-    # place_vals_rev = list(place_vals)
-    # place_vals_rev.reverse()
-    # for s, e in zip(place_vals, place_vals_rev):
-    #     if s != e:
-    #         return False
     return True
 
 
